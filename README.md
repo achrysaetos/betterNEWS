@@ -1,10 +1,8 @@
-# Fullstack Boilerplate
+# News App
 
-A fully functional boilerplate for any fullstack web app, built with Node, React, MongoDB, ChakraUI, and GraphQL.
+A celebrity news aggregator for receiving the most recent headlines, built with Node, React, MongoDB, ChakraUI, and GraphQL.
 
-Authentication has already been handled for you, so you can jump straight to the dashboard and start building!
-
-However, you still need to personalize the backend graphql models (`backend/models/`), the backend graphql resolvers and typeDefs (`backend/graphql/`), and the frontend graphql queries (`frontend/src/graphql/`) -- these should be your main first steps.
+Also uses Scrapy to scrape general news headlines from AP News.
 
 
 ## Important directories
