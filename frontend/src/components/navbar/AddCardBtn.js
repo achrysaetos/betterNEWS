@@ -6,7 +6,7 @@ import { AddIcon } from "@chakra-ui/icons"
 
 import { AuthContext } from "../../context/auth"
 import { useForm } from "../../util/hooks"
-import { CREATE_CARD_MUTATION } from "../../graphql/CREATE_CARD_MUTATION"
+import { CREATE_CARD_MUTATION } from "../../graphql/ADD_KEYWORD_MUTATION"
 
 export default function AddCard() {
     const { user } = useContext(AuthContext)
