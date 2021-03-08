@@ -5,13 +5,9 @@ const userSchema = new Schema({
   password: String,
   email: String,
   createdAt: String,
-  cards: [
+  keywords: [
     {
-      cardNumber: String,
-      cvvNumber: String,
-      expirationMonth: String,
-      expirationYear: String,
-      balanceRemaining: String,
+      keyword: String,
       createdAt: String,
     }
   ]

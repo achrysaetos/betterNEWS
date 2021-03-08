@@ -1,11 +1,7 @@
 const { model, Schema } = require('mongoose')
 
-const cardSchema = new Schema({
-  cardNumber: String,
-  cvvNumber: String,
-  expirationMonth: String,
-  expirationYear: String,
-  balanceRemaining: String,
+const keywordSchema = new Schema({
+  keyword: String,
   createdAt: String,
   user: {
     type: Schema.Types.ObjectId, // lets you reference documents in other collections
@@ -13,4 +9,4 @@ const cardSchema = new Schema({
   }
 })
 
-module.exports = model('Card', cardSchema)
+module.exports = model('Keyword', keywordSchema)

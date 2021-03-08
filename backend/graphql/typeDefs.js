@@ -6,13 +6,9 @@ type Query -- list of available commands that allows clients to fetch the object
 type Mutation -- list of available commands that allows clients to modify data
 */
 module.exports = gql`
-  type Card {
+  type Keyword {
     id: ID!
-    cardNumber: String!
-    cvvNumber: String!
-    expirationMonth: String!
-    expirationYear: String!
-    balanceRemaining: String!
+    keyword: String!
     createdAt: String!
   }
   type User {
@@ -21,7 +17,7 @@ module.exports = gql`
     token: String!
     username: String!
     createdAt: String!
-    cards: [Card]!
+    keywords: [Keyword]!
   }
   input RegisterInput {
     username: String!
@@ -37,7 +33,7 @@ module.exports = gql`
   type Mutation {
     register(registerInput: RegisterInput): User!
     login(username: String!, password: String!): User!
-    createCard(userId: ID!, cardNumber: String!, cvvNumber: String!, expirationMonth: String!, expirationYear: String!, balanceRemaining: String!): User!
-    deleteCard(userId: ID!, cardId: ID!): User!
+    addKeyword(userId: ID!, keyword: String!): User!
+    removeKeyword(userId: ID!, keywordId: ID!): User!
   }
 `
