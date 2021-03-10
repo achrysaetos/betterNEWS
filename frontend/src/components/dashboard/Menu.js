@@ -4,7 +4,7 @@ import { Box, Accordion, AccordionItem, AccordionIcon, AccordionPanel, Accordion
 export default function Menu() {
 
   return(
-    <Flex px={2} maxW="200px" minW="200px" maxH="500px" minH="500px" borderWidth={1} boxShadow="sm" align="center" direction="column">
+    <Flex px={2} mx={8} maxW="200px" minW="200px" maxH="500px" minH="500px" borderWidth={1} boxShadow="sm" align="center" direction="column">
       <Avatar my={6} src="https://bit.ly/broken-link" size="xl"/>
       <Accordion defaultIndex={[0]} w="100%" allowToggle>
         <AccordionItem>

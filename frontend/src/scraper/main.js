@@ -72,6 +72,7 @@ Apify.main(async () => {
   // Run the crawler and wait for it to finish.
   await crawler.run();
 
+  // Combine the json output files into one array
   let headlines = [];
   let filenames = fs.readdirSync("./apify_storage/datasets/default");
   filenames.forEach((file) => {
@@ -84,7 +85,10 @@ Apify.main(async () => {
     }
   });
 
-  console.log(headlines)
+  // Write the array into the headlines.json file
+  fs.writeFileSync("./apify_storage/headlines.json", JSON.stringify(headlines), (err) => {
+    if (err) console.log("Error writing to file:", err)
+  });
   console.log("...Done!");
   
 });
