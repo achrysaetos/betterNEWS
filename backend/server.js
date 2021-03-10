@@ -25,9 +25,13 @@ const fs = require("fs");
 
 // create the server for your express api endpoint
 app.get('/', (req, res) => {
-  const buffer = fs.readFileSync("./apify_storage/hackernews.json");
-  const hackernews = JSON.parse(buffer.toString("utf-8"));
-  res.json(hackernews);
+  try {
+    const buffer = fs.readFileSync("./apify_storage/hackernews.json");
+    const hackernews = JSON.parse(buffer.toString("utf-8"));
+    res.json(hackernews);
+  } catch {
+    res.json({"message": "loading"})
+  }
 });
 
 app.listen(port, () => console.log(`Express API endpoint listening at http://localhost:${port}`));

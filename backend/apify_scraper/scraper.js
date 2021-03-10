@@ -25,7 +25,7 @@ function scrapeHackerNews() {
       },
 
       // Stop crawling after several pages
-      maxRequestsPerCrawl: 1,
+      maxRequestsPerCrawl: 3,
 
       // This function will be called for each URL to crawl.
       // Here you can write the Puppeteer scripts you are familiar with,
@@ -91,4 +91,4 @@ function scrapeHackerNews() {
   });
 }
 
-scrapeHackerNews()
+module.exports = {scrapeHackerNews}

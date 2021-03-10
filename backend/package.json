@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "node ./apify_scraper/scraper.js",
+    "prestart": "node apify_startup.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,7 +23,9 @@
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.9",
+    "node-cron": "^3.0.0",
     "node-fetch": "^2.6.1",
+    "node-schedule": "^2.0.0",
     "puppeteer": "^8.0.0"
   },
   "devDependencies": {}
