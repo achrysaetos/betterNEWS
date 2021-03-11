@@ -5,6 +5,7 @@ import { Menu, MenuButton, MenuList, MenuItem, MenuGroup, MenuDivider } from "@c
 import { ChevronDownIcon } from "@chakra-ui/icons"
 
 import AddTermBtn from "./navbar/AddTermBtn"
+import RemoveTermBtn from "./navbar/RemoveTermBtn"
 import MessagesBtn from "./navbar/MessagesBtn"
 import ProfileBtn from "./navbar/ProfileBtn"
 import { AuthContext } from "../context/auth"
@@ -29,6 +30,7 @@ export default function MenuBar() {
 
       <Flex align="center">
         <AddTermBtn />
+        <RemoveTermBtn />
         <MessagesBtn />
         <ProfileBtn />
 

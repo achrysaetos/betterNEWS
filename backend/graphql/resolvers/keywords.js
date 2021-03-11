@@ -24,11 +24,11 @@ module.exports = {
       }
     },
 
-    async removeKeyword(_, { userId, keywordId }, context) {
+    async removeKeyword(_, { userId, keyword }, context) {
       const user = checkAuth(context);
       const found_user = await User.findById(userId);
       if (found_user) {
-        const keywordIndex = found_user.keywords.findIndex((kw) => kw.id === keywordId);
+        const keywordIndex = found_user.keywords.findIndex((kw) => kw.keyword === keyword);
         if (keywordIndex !== -1) found_user.keywords.splice(keywordIndex, 1);
         await found_user.save();
         return found_user;

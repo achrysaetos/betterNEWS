@@ -2,18 +2,18 @@ import React, { useContext } from "react"
 import { useMutation } from "@apollo/react-hooks"
 import { Flex, Text, Button, useDisclosure, IconButton, Input } from "@chakra-ui/react"
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react"
-import { AddIcon } from "@chakra-ui/icons"
+import { MinusIcon } from "@chakra-ui/icons"
 
 import { AuthContext } from "../../context/auth"
 import { useForm } from "../../util/hooks"
-import { ADD_KEYWORD_MUTATION } from "../../graphql/ADD_KEYWORD_MUTATION"
+import { REMOVE_KEYWORD_MUTATION } from "../../graphql/REMOVE_KEYWORD_MUTATION"
 
 export default function AddTerm() {
     const { user } = useContext(AuthContext)
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { values, onChange, onSubmit } = useForm(createCardCallback, { userId: user.id, keyword: "" })
 
-    const [createCard] = useMutation(ADD_KEYWORD_MUTATION, {
+    const [createCard] = useMutation(REMOVE_KEYWORD_MUTATION, {
       variables: values,
       update() {
         values.keyword = ""
@@ -26,12 +26,12 @@ export default function AddTerm() {
 
   return (
     <>
-      <IconButton variant="outline" colorScheme="teal" icon={<AddIcon />} size="lg" mr={6} onClick={onOpen}/>
+      <IconButton variant="outline" colorScheme="teal" icon={<MinusIcon />} size="lg" mr={6} onClick={onOpen}/>
       <Modal onClose={onClose} isOpen={isOpen} motionPreset="slideInBottom" size="xl">
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>
-            <Text color="teal.500">Add an Interest</Text>
+            <Text color="teal.500">Remove an Interest</Text>
             <ModalCloseButton _focus="outline: 0" />
           </ModalHeader>
 
@@ -57,7 +57,7 @@ export default function AddTerm() {
                     </Flex>
 
                     <Button 
-                      colorScheme="teal" 
+                      colorScheme="red" 
                       variant="outline" 
                       width="full" 
                       mt={6} 
@@ -68,7 +68,7 @@ export default function AddTerm() {
                         values.keyword.trim() === ""
                       }
                     >
-                      Add
+                      Remove
                     </Button>
                   </form>
                 </Flex>

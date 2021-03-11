@@ -34,6 +34,6 @@ module.exports = gql`
     register(registerInput: RegisterInput): User!
     login(username: String!, password: String!): User!
     addKeyword(userId: ID!, keyword: String!): User!
-    removeKeyword(userId: ID!, keywordId: ID!): User!
+    removeKeyword(userId: ID!, keyword: String!): User!
   }
 `

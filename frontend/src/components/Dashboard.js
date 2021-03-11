@@ -23,25 +23,15 @@ export default function Home({ links, terms }) {
     headlines.current = arr
   }, [links, terms]);
 
-  function MouseOver(event) {
-    event.target.style.color = "red";
-    event.target.innerText = "(-) " + event.target.innerText;
-  }
-  function MouseOut(event){
-    event.target.style.color = "";
-    event.target.innerText = event.target.innerText.substring(4);
-  }
-
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />
       <Box>
+        <Heading fontSize="3xl" color="teal.500" textAlign="center" pb={2}>My Interests</Heading>
         {headlines.current.map((group) => 
           <Box key={group.term}>
             {group.articles.length > 0 ? 
-              <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2} _hover={{ cursor: "pointer" }}>
-                <span onMouseOver={MouseOver} onMouseOut={MouseOut}>{group.term}</span>
-              </Heading> : ""
+              <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>{group.term}</Heading> : ""
             }
             {group.articles.map((article) => {
               return (
