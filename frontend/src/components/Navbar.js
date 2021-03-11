@@ -4,7 +4,7 @@ import { Box, Heading, Flex, Text, Button } from "@chakra-ui/react"
 import { Menu, MenuButton, MenuList, MenuItem, MenuGroup, MenuDivider } from "@chakra-ui/react"
 import { ChevronDownIcon } from "@chakra-ui/icons"
 
-import AddCardBtn from "./navbar/AddCardBtn"
+import AddTermBtn from "./navbar/AddTermBtn"
 import MessagesBtn from "./navbar/MessagesBtn"
 import ProfileBtn from "./navbar/ProfileBtn"
 import { AuthContext } from "../context/auth"
@@ -28,7 +28,7 @@ export default function MenuBar() {
       </Flex>
 
       <Flex align="center">
-        <AddCardBtn />
+        <AddTermBtn />
         <MessagesBtn />
         <ProfileBtn />
 

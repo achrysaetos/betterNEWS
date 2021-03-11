@@ -4,7 +4,7 @@ import { Flex, Link, Box, Text } from "@chakra-ui/react"
 export default function Footer() {
 
   return(
-    <Flex as="nav" align="center" justify="space-between" wrap="wrap" w="100%" pt={60} pl={0}>
+    <Flex as="nav" align="center" justify="space-between" wrap="wrap" w="100%" pt={30} pl={0} pb={6}>
       <Flex align="center">
         <Text> Copyright © 2021 ACHRYSAETOS. All rights reserved. </Text>
       </Flex>
