@@ -18,7 +18,7 @@ export default function Home() {
     for (let i = 0; i < data?.getUser.keywords.length; i++){
       const term = data?.getUser.keywords[i].keyword
       const weekago = moment(Date.now() - 7 * 24 * 3600 * 1000).format('YYYY-MM-DD')
-      const api_key = "ccd72be329bc4978907b2e228580c227"
+      const api_key = "eb988ad7c7a34d648cbb76ea2e8cd3c6"
       const link = `https://newsapi.org/v2/everything?language=en&qInTitle="${term}"
       &pageSize=5&sortBy=popularity&from=${weekago}&apiKey=${api_key}`
       links.push(link)
