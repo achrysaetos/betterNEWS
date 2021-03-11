@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
+import MyInterests from "./pages/MyInterests"
 
 export default function App() {
 
@@ -24,6 +25,7 @@ export default function App() {
             <Navbar />
             <AuthRoute exact path="/" component={() => { window.location.href = 'https://achrysaetos.webflow.io/' }} />
             <Route exact path="/" component={Home} />
+            <Route exact path="/myinterests" component={MyInterests} />
             <AuthRoute exact path="/login" component={Login} /> {/* redirect to home if user is logged in */}
             <AuthRoute exact path="/register" component={Register} /> {/* redirect to home if user is logged in */}
           </Container>
