@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Link, Box, Heading, Flex, Tooltip } from "@chakra-ui/react"
+import { Link, Box, Heading, Flex, Tooltip, Text } from "@chakra-ui/react"
 
 import Menu from "./dashboard/Menu"
 import Footer from "./dashboard/Footer"
@@ -26,8 +26,9 @@ export default function Interests({ links, terms }) {
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />
-      <Box>
+      <Box w="auto">
         <Heading fontSize="3xl" color="teal.500" textAlign="center" pb={2}>My Interests</Heading>
+        <Text as="em">Currently following: {terms.join(", ")}</Text>
         {headlines.current.map((group) => 
           <Box key={group.term}>
             {group.articles.length > 0 ? 

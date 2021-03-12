@@ -28,7 +28,7 @@ app.use(cors()) // easiest way to enable cors
 // create the server for your express api endpoint
 app.get('/', (req, res) => {
   try {
-    const buffer = fs.readFileSync("./apify_storage/hackernews.json");
+    const buffer = fs.readFileSync("./apify_output/hackernews.json");
     const hackernews = JSON.parse(buffer.toString("utf-8"));
     res.json(hackernews);
   } catch {

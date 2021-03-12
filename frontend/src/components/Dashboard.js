@@ -12,7 +12,7 @@ export default function Dashboard() {
     const fetchData = async () => {
       const response = await fetch("http://localhost:8080");
       const data = await response.json();
-      setData(data.slice(0, 10))
+      setData(data.slice(0, 20))
       setLoading(false);
     };
     fetchData();
@@ -21,7 +21,7 @@ export default function Dashboard() {
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />
-      <Box>
+      <Box w="60%">
         <Box>
           <Heading fontSize="3xl" color="teal.500" textAlign="center" pb={2}>My Sources</Heading>
           <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>Hacker News</Heading>

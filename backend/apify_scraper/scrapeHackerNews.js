@@ -44,7 +44,6 @@ function scrapeHackerNews() {
           $posts.forEach(($post) => {
             scrapedData.push({
               title: $post.querySelector(".storylink").innerText,
-              rank: $post.querySelector(".rank").innerText,
               href: $post.querySelector(".storylink").href,
             });
           });
@@ -86,7 +85,7 @@ function scrapeHackerNews() {
     });
 
     // Write the array into the headlines.json file
-    fs.writeFileSync("./apify_storage/hackernews.json", JSON.stringify(headlines));
+    fs.writeFileSync("./apify_output/hackernews.json", JSON.stringify(headlines));
     console.log("...Done!");
   });
 }
