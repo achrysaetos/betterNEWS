@@ -19,7 +19,6 @@ export default function Menu() {
           <AccordionPanel pb={4} ml={2}> 
             <Link as={aLink} to="/myinterests"> My Interests </Link>
           </AccordionPanel>
-          <AccordionPanel pb={4} ml={2}> Following </AccordionPanel>
         </AccordionItem>
 
         <AccordionItem>
@@ -27,8 +26,8 @@ export default function Menu() {
             <Box flex="1" textAlign="left" fontWeight="bold"> Account </Box>
             <AccordionIcon />
           </AccordionButton>
-          <AccordionPanel pb={4} ml={2}> My Profile </AccordionPanel>
-          <AccordionPanel pb={4} ml={2}> My Messages </AccordionPanel>
+          <AccordionPanel pb={4} ml={2}> Profile </AccordionPanel>
+          <AccordionPanel pb={4} ml={2}> Messages </AccordionPanel>
           <AccordionPanel pb={4} ml={2}> Settings </AccordionPanel>
         </AccordionItem>
 

@@ -22,7 +22,9 @@ const express = require("express")
 const app = express()
 const port = 8080
 const fs = require("fs");
+var cors = require("cors");
 
+app.use(cors()) // easiest way to enable cors
 // create the server for your express api endpoint
 app.get('/', (req, res) => {
   try {
