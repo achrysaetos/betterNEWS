@@ -31,6 +31,8 @@ export default function Interests({ links, terms }) {
     return a;
   }
   
+  // adding/removing terms doesn't require a refresh to display the currently following keywords, but does require a refresh
+  // to display the new headlines because the app needs to make new calls to the News API
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />

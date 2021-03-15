@@ -1,6 +1,6 @@
 # News App
 
-One place for all your news. Built with Node, MongoDB, React, ChakraUI, and GraphQL.
+One place for all the news you follow. Built with Node, MongoDB, React, ChakraUI, and GraphQL.
 
 Integrates with Puppeteer to **scrape general news headlines** from any current site (currently scraping Hacker News and Tech Crunch, as examples).
 

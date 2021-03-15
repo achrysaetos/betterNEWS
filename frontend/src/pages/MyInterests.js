@@ -8,7 +8,7 @@ import Interests from "../components/Interests"
 
 export default function MyInterests() {
   const { user } = useContext(AuthContext)
-  const { loading, data } = useQuery(FETCH_USER_QUERY, { variables: { userId: user.id }})
+  const { loading, data } = useQuery(FETCH_USER_QUERY, { variables: { userId: user?.id }})
 
   if (loading) {
     return ""
