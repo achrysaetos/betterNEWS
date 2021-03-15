@@ -23,13 +23,21 @@ export default function Interests({ links, terms }) {
     headlines.current = arr
   }, [links, terms]);
 
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+  
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />
       <Box w="auto">
         <Heading fontSize="3xl" color="teal.500" textAlign="center" pb={2}>My Interests</Heading>
         <Text as="em">Currently following: {terms.join(", ")}</Text>
-        {headlines.current.map((group) => 
+        {shuffle(headlines.current).map((group) => 
           <Box key={group.term}>
             {group.articles.length > 0 ? 
               <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>{group.term}</Heading> : ""

@@ -1,10 +1,10 @@
 # News App
 
-One place for all your news, general and specific. Built with Node, MongoDB, React, ChakraUI, and GraphQL.
+One place for all your news. Built with Node, MongoDB, React, ChakraUI, and GraphQL.
 
 Integrates with Puppeteer to **scrape general news headlines** from any current site (currently scraping Hacker News and Tech Crunch, as examples).
 
-Integrates with News API to **crawl for specific topics** from the web (enter your interests by keyword, and we'll crawl the entire web for you).
+Integrates with News API to **crawl for specific topics** from the web (enter your interests by keyword, and we'll find any current mentions of it on the web).
 
 *Don't forget to add your database url and api keys in `config.js`.*
 
@@ -13,12 +13,11 @@ Integrates with News API to **crawl for specific topics** from the web (enter yo
 2. run `yarn start` in the frontend directory.
 3. Go to http://localhost:3000. Your Express API endpoint is up at localhost:8080, and your GraphQL database is up at localhost:5000.
 
-**Eventually, we will be able to automate scraping and securely publish, and users will be able to filter by keywords.**
+**Eventually, we will be able to automate scraping across any number of sites.**
 
 **Final Notes:**
-* It's very grueling for users to have to pick specific tags for their news.
-* More importantly, new topics will appeal to users arbitrarily as a sign of the times.
-* And finally, numerous news sources have already invested millions of dollars in terrific vetting algorithms.
+* New topics will appeal to users arbitrarily as a sign of the times.
+* And secondly, numerous news sources have already invested millions of dollars in terrific vetting algorithms.
 * *This is why we cannot do an ordinary, general news app.*
 
 ## Important directories
