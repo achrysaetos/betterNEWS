@@ -1,4 +1,4 @@
-# News App
+# betterNEWS
 
 One place for all the news you follow. Built with Node, MongoDB, React, ChakraUI, and GraphQL.
 
