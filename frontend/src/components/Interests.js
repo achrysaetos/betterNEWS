@@ -45,10 +45,20 @@ export default function Interests({ links, terms }) {
               <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>{group.term}</Heading> : ""
             }
             {group.articles.map((article) => {
+              const date = new Date(article.publishedAt)
+              const formattedDate = date.toISOString().substring(5, 7)+"/"+date.toISOString().substring(8, 10)+"/"+date.toISOString().substring(0, 4)
               return (
-                <Box key={article.title}>
+                <Box key={article.title} width="80%" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis">
                   <Link fontSize="lg" color="black" href={article.url} _hover={{ color: "teal.500" }}>
-                    <Tooltip label={article.description} placement="left">
+                    <Tooltip label={
+                      <>
+                        <Flex fontWeight="bold" justify="space-between">
+                          <Text>{article.source.name}</Text>
+                          <Text>{formattedDate}</Text>
+                        </Flex>
+                        <Text>{article.description}</Text>
+                      </>
+                    } placement="left">
                       {article.title}
                     </Tooltip>
                   </Link>

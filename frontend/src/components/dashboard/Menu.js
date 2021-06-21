@@ -14,10 +14,10 @@ export default function Menu() {
             <AccordionIcon />
           </AccordionButton>
           <AccordionPanel pb={4} ml={2}> 
-            <Link as={aLink} to="/"> My Sources </Link>
+            <Link as={aLink} to="/" _hover={{ color: "teal.500" }}> My Sources </Link>
           </AccordionPanel>
           <AccordionPanel pb={4} ml={2}> 
-            <Link as={aLink} to="/myinterests"> My Interests </Link>
+            <Link as={aLink} to="/myinterests" _hover={{ color: "teal.500" }}> My Interests </Link>
           </AccordionPanel>
         </AccordionItem>
 
@@ -26,9 +26,15 @@ export default function Menu() {
             <Box flex="1" textAlign="left" fontWeight="bold"> Account </Box>
             <AccordionIcon />
           </AccordionButton>
-          <AccordionPanel pb={4} ml={2}> Profile </AccordionPanel>
-          <AccordionPanel pb={4} ml={2}> Messages </AccordionPanel>
-          <AccordionPanel pb={4} ml={2}> Settings </AccordionPanel>
+          <AccordionPanel pb={4} ml={2} _hover={{ color: "teal.500" }}> 
+            <Link as={aLink} to="/" _hover={{ color: "teal.500" }}> Messages </Link>
+          </AccordionPanel>
+          <AccordionPanel pb={4} ml={2} _hover={{ color: "teal.500" }}> 
+            <Link as={aLink} to="/" _hover={{ color: "teal.500" }}> Account </Link>
+          </AccordionPanel>
+          <AccordionPanel pb={4} ml={2} _hover={{ color: "teal.500" }}> 
+            <Link as={aLink} to="/" _hover={{ color: "teal.500" }}> Settings </Link>
+          </AccordionPanel>
         </AccordionItem>
 
       </Accordion>
