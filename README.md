@@ -9,7 +9,7 @@ Integrates with News API to **crawl for specific topics** from the web (enter yo
 *Don't forget to add your database url and api keys in `config.js`.*
 
 **TO LAUNCH THE SITE:**
-1. run `yarn start` in the backend directory -- connects to the MongoDB database and the Express API endpoint, and runs the spiders to scrape for headlines from any sites listed in `apify_startup.js`.
+1. run `yarn start` in the backend directory -- connects to the MongoDB database and the Express API endpoint, and runs the spiders to scrape for headlines from any sites listed in the `apify_scraper` folder.
 2. run `yarn start` in the frontend directory.
 3. Go to http://localhost:3000. Your Express API endpoint is up at localhost:8080, and your GraphQL playground is up at localhost:5000.
 
