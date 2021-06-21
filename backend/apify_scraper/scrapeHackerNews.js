@@ -45,6 +45,7 @@ function scrapeHackerNews() {
             scrapedData.push({
               title: $post.querySelector(".storylink").innerText,
               href: $post.querySelector(".storylink").href,
+              source: "HackerNews",
             });
           });
 

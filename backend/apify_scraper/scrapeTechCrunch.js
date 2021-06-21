@@ -45,6 +45,7 @@ function scrapeTechCrunch() {
             scrapedData.push({
               title: $post.querySelector(".post-block__title__link").innerText,
               href: $post.querySelector(".post-block__title__link").href,
+              source: "TechCrunch",
             });
           });
 

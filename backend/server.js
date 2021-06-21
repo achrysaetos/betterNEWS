@@ -32,7 +32,8 @@ app.get('/', (req, res) => {
     const buffer2 = fs.readFileSync("./apify_output/techcrunch.json");
     const hackernews = JSON.parse(buffer.toString("utf-8"));
     const techcrunch = JSON.parse(buffer2.toString("utf-8"));
-    res.json(hackernews);
+    const headlines = [...hackernews.slice(0, 20), ...techcrunch.slice(0, 20)];
+    res.json(headlines);
   } catch {
     res.json({"message": "loading"})
   }

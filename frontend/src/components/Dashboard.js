@@ -12,7 +12,7 @@ export default function Dashboard() {
     const fetchData = async () => {
       const response = await fetch("http://localhost:8080");
       const data = await response.json();
-      setData(data.slice(0, 20))
+      setData(data)
       setLoading(false);
     };
     fetchData();
@@ -27,11 +27,25 @@ export default function Dashboard() {
           <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>Hacker News</Heading>
           {data.map((article) => {
             return (
+              article.source === "HackerNews" ?
               <Box key={article.title} width="80%" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis">
                 <Link fontSize="lg" color="black" href={article.href} _hover={{ color: "teal.500" }}>
                     {article.title}
                 </Link>
               </Box>
+              : ""
+            )
+          })}
+          <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>TechCrunch</Heading>
+          {data.map((article) => {
+            return (
+              article.source === "TechCrunch" ?
+              <Box key={article.title} width="80%" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis">
+                <Link fontSize="lg" color="black" href={article.href} _hover={{ color: "teal.500" }}>
+                    {article.title}
+                </Link>
+              </Box>
+              : ""
             )
           })}
         </Box>
