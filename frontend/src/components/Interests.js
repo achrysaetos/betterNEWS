@@ -36,7 +36,7 @@ export default function Interests({ links, terms }) {
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />
-      <Box w="auto">
+      <Box width="100%">
         <Heading fontSize="3xl" color="teal.500" textAlign="center" pb={2}>My Interests</Heading>
         <Text as="em">Currently following: {terms.join(", ")}</Text>
         {shuffle(headlines.current).map((group) => 

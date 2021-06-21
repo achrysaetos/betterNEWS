@@ -21,13 +21,13 @@ export default function Dashboard() {
   return loading ? "" : (
     <Flex justifyContent="flex-start">
       <Menu />
-      <Box w="60%">
+      <Box width="100%">
         <Box>
           <Heading fontSize="3xl" color="teal.500" textAlign="center" pb={2}>My Sources</Heading>
           <Heading fontSize="xl" color="teal.500" textTransform="uppercase" py={2}>Hacker News</Heading>
           {data.map((article) => {
             return (
-              <Box key={article.title}>
+              <Box key={article.title} width="80%" whiteSpace="nowrap" overflow="hidden" textOverflow="ellipsis">
                 <Link fontSize="lg" color="black" href={article.href} _hover={{ color: "teal.500" }}>
                     {article.title}
                 </Link>

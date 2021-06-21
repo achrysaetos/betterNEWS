@@ -29,7 +29,9 @@ app.use(cors()) // easiest way to enable cors
 app.get('/', (req, res) => {
   try {
     const buffer = fs.readFileSync("./apify_output/hackernews.json");
+    const buffer2 = fs.readFileSync("./apify_output/techcrunch.json");
     const hackernews = JSON.parse(buffer.toString("utf-8"));
+    const techcrunch = JSON.parse(buffer2.toString("utf-8"));
     res.json(hackernews);
   } catch {
     res.json({"message": "loading"})
